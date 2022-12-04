@@ -73,7 +73,7 @@ def main():
     parser.add_argument('--nodb', action='store_true')
     args = parser.parse_args()
 
-    token = 'MTA0ODkxNDkzMzMxMzY5OTg3MA.GkHhts.Xocoi3dL2FZntkjwQqYuEDF5TiEf5X_NS6LIN4'
+    token = "Enter your token here"
     if not token:
         logging.error('Token required')
         return
