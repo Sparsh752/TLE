@@ -9,13 +9,14 @@ import itertools
 import pytz
 from discord.ext import commands
 import discord
-
-from tle import constants
-from tle.util import cache_system2
-from tle.util import codeforces_api as cf
-from tle.util import clist_api as clist
-from tle.util import db
-from tle.util import events
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+import constants
+from util import cache_system2
+from util import codeforces_api as cf
+from util import clist_api as clist
+from util import db
+from util import events
 
 logger = logging.getLogger(__name__)
 

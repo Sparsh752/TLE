@@ -5,11 +5,12 @@ import random
 
 import discord
 from discord.ext import commands
-
-from tle.util import codeforces_api as cf
-from tle.util import clist_api as clist
-from tle.util import db
-from tle.util import tasks
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+from util import codeforces_api as cf
+from util import clist_api as clist
+from util import db
+from util import tasks
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +19,7 @@ _SUCCESS_GREEN = 0x28A745
 _ALERT_AMBER = 0xFFBF00
 
 
-def embed_neutral(desc, color=discord.Embed.Empty):
+def embed_neutral(desc, color=discord.Color.default()):
     return discord.Embed(description=str(desc), color=color)
 
 

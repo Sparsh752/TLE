@@ -1,7 +1,8 @@
 import json
 import sqlite3
-
-from tle.util import codeforces_api as cf
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+from util import codeforces_api as cf
 
 
 class CacheDbConn:

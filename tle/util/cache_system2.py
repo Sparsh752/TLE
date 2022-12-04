@@ -5,13 +5,14 @@ from aiocache import cached
 
 from collections import defaultdict
 from discord.ext import commands
-
-from tle.util import codeforces_common as cf_common
-from tle.util import codeforces_api as cf
-from tle.util import events
-from tle.util import tasks
-from tle.util import paginator
-from tle.util.ranklist import Ranklist
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+from util import codeforces_common as cf_common
+from util import codeforces_api as cf
+from util import events
+from util import tasks
+from util import paginator
+from util.ranklist import Ranklist
 
 logger = logging.getLogger(__name__)
 _CONTESTS_PER_BATCH_IN_CACHE_UPDATES = 100

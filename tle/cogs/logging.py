@@ -68,7 +68,7 @@ class Logging(commands.Cog, logging.Handler):
 
 
 def setup(bot):
-    logging_cog_channel_id = os.environ.get('LOGGING_COG_CHANNEL_ID')
+    logging_cog_channel_id = 1048212913539784805
     if logging_cog_channel_id is None:
         logger.info('Skipping installation of logging cog as logging channel is not provided.')
         return

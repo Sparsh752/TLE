@@ -5,11 +5,11 @@ from typing import List
 
 from discord.ext import commands
 
-from tle.util import codeforces_api as cf
+from util import codeforces_api as cf
 
 from os import environ
 from firebase_admin import storage
-from tle import constants
+import constants
 bucket = None
 STORAGE_BUCKET = str(environ.get('STORAGE_BUCKET'))
 if STORAGE_BUCKET!='None':

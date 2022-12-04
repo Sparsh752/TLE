@@ -1,11 +1,13 @@
 import logging
 import os
 import datetime as dt
-from tle.util.codeforces_api import RatingChange, make_from_dict, Contest as CfContest
+
 import requests
 import json
-
-from tle import constants
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+import constants
+from util.codeforces_api import RatingChange, make_from_dict, Contest as CfContest
 from discord.ext import commands
 
 from pathlib import Path
@@ -78,6 +80,7 @@ def ratelimit(f):
 @ratelimit
 async def _query_clist_api(path, data):
     url = URL_BASE + path
+    
     clist_token = os.getenv('CLIST_API_TOKEN')
     if data is None:
         url += '?'+clist_token
@@ -99,12 +102,11 @@ async def _query_clist_api(path, data):
 
 
 def _query_api():
-    clist_token = os.getenv('CLIST_API_TOKEN')
+    clist_token = '/?username=Sparsh&api_key=c5b41252e84b288521c92f78cc70af99464345f8'
     contests_start_time = dt.datetime.utcnow() - dt.timedelta(days=2)
     contests_start_time_string = contests_start_time.strftime(
         "%Y-%m-%dT%H%%3A%M%%3A%S")
-    url = URL_BASE +'/contest?limit=200&start__gte=' + \
-        contests_start_time_string + '&' + clist_token
+    url = URL_BASE +'/contest?limit=200&start__gte=' + contests_start_time_string + '&' + clist_token
 
     try:
         resp = requests.get(url)

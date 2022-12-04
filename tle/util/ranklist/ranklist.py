@@ -1,8 +1,10 @@
 from discord.ext import commands
 
-from tle.util.ranklist.rating_calculator import CodeforcesRatingCalculator
-from tle.util.handledict import HandleDict
 
+import sys
+sys.path.insert(0,'/Users/sparshmittal/Desktop/TLE/TLE/tle')
+from util.handledict import HandleDict
+from util.ranklist.rating_calculator import CodeforcesRatingCalculator
 
 class RanklistError(commands.CommandError):
     def __init__(self, contest, message=None):
