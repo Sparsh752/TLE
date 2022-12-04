@@ -13,7 +13,7 @@ from os import environ
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
-
+#This is a test comment made by Nova_Adi
 STORAGE_BUCKET = str(environ.get('STORAGE_BUCKET'))
 bucket = None
 if STORAGE_BUCKET!='None':
